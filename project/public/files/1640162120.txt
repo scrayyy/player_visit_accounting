@@ -1,0 +1,90 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 10, 2021 at 09:09 AM
+-- Server version: 10.5.12-MariaDB-cll-lve
+-- PHP Version: 7.2.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `u668684974_dbgori`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ads`
+--
+
+CREATE TABLE `ads` (
+  `ads_id` int(111) NOT NULL,
+  `ads_page` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ads_position` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ads_image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ads_url` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ads_script` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ads_type` int(10) DEFAULT NULL COMMENT '1 სურათი 2 სკრიპტი',
+  `ads_device` int(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `ads`
+--
+
+INSERT INTO `ads` (`ads_id`, `ads_page`, `ads_position`, `ads_image`, `ads_url`, `ads_script`, `ads_type`, `ads_device`) VALUES
+(1, 'HOME', 'A1', 'ads/mbc/1.gif', 'https://auto.mbc.com.ge/main?utm_source=regionalmedia&utm_medium=gif&utm_campaign=auto', NULL, 1, 1),
+(2, 'HOME', 'S1', 'sss', NULL, NULL, 1, 1),
+(3, 'HOME', 'S2', NULL, NULL, NULL, 1, 1),
+(4, 'HOME', 'S3', NULL, NULL, NULL, 1, 1),
+(5, 'HOME', 'A2', 'ads/mbc/5.gif', 'https://www.mbc.com.ge/?utm_source=regionalmedia&utm_medium=gif&utm_campaign=valuta', NULL, 1, 2),
+(6, 'POST', 'S1', 'ads/mbc/5.gif', 'https://www.mbc.com.ge/?utm_source=regionalmedia&utm_medium=gif&utm_campaign=valuta', NULL, 1, 1),
+(7, 'POST', 'S2', 'ads/lideri/1.gif', NULL, NULL, 1, 1),
+(8, 'POST', 'S3', 'ads/tv/tv_monitoringi.png', 'https://tvmonitoringi.ge/', NULL, 1, 1),
+(9, 'POST', 'P1', 'ads/sloboda/1.png', '', NULL, 1, 1),
+(10, 'POST', 'P1', 'ads/sloboda/1.png', '', NULL, 1, 1),
+(11, 'POST', 'P1', 'ads/sloboda/1.png', '', NULL, 1, 1),
+(12, 'POST', 'P1', 'ads/sloboda/1.png', '', NULL, 1, 1),
+(13, 'POST', 'S1', 'ads/sloboda/1.png', '', NULL, 1, 1),
+(14, 'POST', 'S1', 'ads/mbc/7.gif', '', NULL, 1, 1),
+(15, 'POST', 'S1', 'ads/mbc/8.gif', '', NULL, 1, 1),
+(16, 'HOME', 'A1', 'ads/sloboda/1.png', NULL, NULL, 1, 1),
+(17, 'HOME', 'A1', 'ads/sloboda/1.png', '', NULL, 1, 2),
+(18, 'HOME', 'A1', 'ads/sloboda/1.png', NULL, NULL, 1, 2),
+(19, 'POST', 'S4', 'ads/sloboda/2.png', '', NULL, 1, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `ads`
+--
+ALTER TABLE `ads`
+  ADD PRIMARY KEY (`ads_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `ads`
+--
+ALTER TABLE `ads`
+  MODIFY `ads_id` int(111) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
